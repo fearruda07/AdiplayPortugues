@@ -1,0 +1,400 @@
+
+/* vermelho #f44336 ou #d50000 verde #4caf50 ou #1b5e20  */
+:root {
+    --principal: #5ea0c9;
+    --secundaria: #000000;
+    --azul-escuro: #0d47a1;
+    --cinza-escuro: rgb(12, 12, 12);
+    --branco: rgb(0, 177, 225);
+    --verde: #4caf50;
+    --vermelho: #ff0f0f;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    
+}
+.logo{
+    width:10vw;
+    height: 20vh;
+    border-radius: 10%;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 30px; 
+
+   
+}
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-image: url(WhatsApp\ Image\ 2022-11-30\ at\ 09.55.30.jpeg);
+    background-size: cover;
+    color: #f8f8f9;
+    background-position: center;
+   
+    
+}
+
+main {
+    width: 100%;
+    height: 100%;
+}
+
+section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 30px;
+    
+}
+
+
+/* classe para centralizar textos, paragrafos */
+.centro {
+    text-align: center;
+    text-shadow: 2px 3px 10px #5ea0c9;
+    color: #f8f8f9;
+}
+
+/* div class questao com numero da questao e pergunta */
+.questao {
+    display: inline-block;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 6px;
+    text-shadow: 7px 8px 8px #03a9f4;
+    text-align: center;
+    
+    
+}
+
+
+#numQuestao {
+    
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    background: var(--principal);
+    color: rgb(255, 255, 255);
+    padding: 5px 10px 2px 5px;
+    border-radius: 50%;
+    display: none;
+    
+}
+
+#pergunta {
+    width: 100%;
+  text-align: center;
+   display: flex;
+   font-size: 20px;
+   margin-top: 30px;
+  
+}
+
+.imagemDaQuestao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 25vh;
+
+}
+
+
+/* article que acomoda a questao completa */
+.questoes {
+    user-select: none;
+    background-image: url(DIVERSIDADE.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 0px;
+    border: 5px solid #ffffff;
+    border-radius: 50px;
+    margin-bottom: 0px;
+    margin-top: -70px;
+    width:100vh;
+
+}
+
+
+.questoes ol li {
+    border: 5px solid var(--principal);
+    display: inline-block;
+    margin-left: 10px;
+    border-radius: 40px;
+    border-color: #fffefe;
+    text-align: center;
+    width: 60vh;
+    transition: transform .4s;
+    margin-bottom: 7px;
+    color: #ffffff;
+    text-shadow: 3px 3px 10px #0088d6;
+    background-color: #000000;
+    font-size: 18px;
+    padding-bottom: 3px;
+    
+
+}
+
+.questoes ol li:hover {
+    background: var(--principal);
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.bloqueado {
+    display: flex;
+}
+
+.bloqueado li:hover {
+    display: flex;
+}
+
+#instrucoes {
+    padding: 90px;
+    display:inline-block;
+    margin-top:-100PX;
+    background: none;
+}
+
+.logo-idiomas{
+    
+    display:flex;
+    margin-top:-2PX;
+    align-items: center;
+    list-style: none;
+  
+
+}
+.logo-idiomas h2{
+    font-size: 20px;
+   padding-top: -105px;
+}
+.logo-idiomas li a{
+    padding: 7px;
+    align-items: center;
+    transition: transform .4s;
+
+}
+.logo-idiomas li a :hover{
+    transform: scale(1.2);
+}
+
+#aviso {
+    color: var(--principal);
+}
+
+#autoria {
+    margin-top: 2px;
+    font-size: 10px;
+}
+
+/* ANIMACAO */
+
+/* Animar o input */
+@keyframes piscar {
+    0% {
+        filter: drop-shadow(0 0 15px var(--principal));
+        -webkit-filter: drop-shadow(0 0 15px var(--principal));
+        -moz-filter: drop-shadow(0 0 15px var(--principal));
+        -o-filter: drop-shadow(0 0 15px var(--principal));
+        -ms-filter: drop-shadow(0 0 15px var(--principal));
+    }
+    100% {
+    }
+}
+
+.animar {
+    animation: piscar .75s infinite alternate;
+}
+
+.aparecer {
+    animation: aparecer .5s infinite alternate;
+}
+
+@keyframes aparecer {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.acertou {
+    background: var(--verde);
+    animation: aparecer 0.2s infinite alternate;
+    
+}
+
+.errou {
+    background: var(--vermelho);
+    animation: aparecer 0.2s infinite alternate;
+}
+
+.placar {
+    padding: 2px;
+    border-radius: 8px;
+    background:#5a5ae5cb;
+    
+}
+@media screen and (max-width:600px){
+
+   
+
+    body{
+        display: inline-block;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        justify-items: center;
+        width: 100%;      
+        text-align: center;
+        
+}
+.questoes {
+    user-select: none;
+    background-image: url(DIVERSIDADE.jpg);
+    background-size: cover;
+    background-position: center;
+    border: 7px solid #ffffff;
+    border-radius: 50px;
+    margin-bottom: 0px;
+    margin-top: -50px;
+    width:90%;
+    height:70%; 
+    margin-left: 22px;
+   
+}
+.logo-idiomas{
+
+    display:flex;
+    margin-top:-2PX;
+    align-items: center;
+    list-style: none;
+  
+
+}
+.logo-idiomas h2{
+    font-size: 20px;
+   padding-top: -105px;
+}
+.logo-idiomas li a{
+    padding: 7px;
+    align-items: center;
+    transition: transform .4s;
+
+}
+.logo-idiomas li a :hover{
+    transform: scale(1.2);
+}
+    
+main {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+#instrucoes {
+    font-size: 20px;
+    color: #ffffff;
+    padding: 15%;
+    border-radius: 2px;
+    text-shadow: 10px 2px 7px #03a9f4;
+    display: inline-block;
+    margin-top: -60px;
+    
+
+}
+    
+    
+.questoes ol li {
+    border: 5px solid var(--principal);
+    display: inline-block;
+    margin-bottom:5px;
+    border-radius: 20px;
+    border-color: #f8f8f9;
+    background-color: #282525;
+    text-align: center;
+    width: 67vw;
+    margin-left: 15px;
+    color: #ffffff;
+    text-shadow: 3px 3px 10px #0088d6;
+    background-color: #000000;
+    font-size: 15px;
+
+}
+.questoes ol li:hover {
+    background: var(--principal);
+    
+}
+    
+
+#numQuestao {
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    background: var(--principal);
+    color: rgb(255, 255, 255);
+    padding: 5px 10px 2px 5px;
+    border-radius: 50%;  
+    margin-right: 30px;
+    display: none;
+}
+
+    
+section {
+    width: 100%;
+    display: inline-block;
+    flex-direction: column;
+    justify-content: center;
+   text-align: center;
+}
+#pergunta {
+    width: 100%;
+    text-align: center;
+    font-size: 80%;
+    display: inline-block;  
+}
+
+.logo{
+    width: 35vw;
+    height: 23vh;
+    background-size: cover;
+    background-position: center;
+    display: inline-block;
+    padding-top:5px;
+    margin-left: 35px;
+    
+    
+
+}
+.placar {
+    padding: 2px;
+    border-radius: 5px;
+    background: none;
+    margin-top: 200px;
+       
+}    
+
+#autoria {
+    margin-top: 2px;
+    font-size: 10px;    
+}
+    
+}
